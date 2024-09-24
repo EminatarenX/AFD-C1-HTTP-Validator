@@ -1,0 +1,16 @@
+Método,URL,Versión
+GET,/index.html,HTTP/1.1
+POST,/api/users?id=123,HTTP/1.1
+PUT,/update/profile.php,HTTP/1.1
+DELETE,/api/posts/456,HTTP/1.1
+GET,/images/logo.png?v=2,HTTP/1.1
+FETCH,/data.json,HTTP/1.1
+GET,index.html,HTTP/1.1
+POST,/form data,HTTP/1.1
+GET,/api/users?id=123&name=John Doe,HTTP/1.1
+GET,/index.html,HTTP/3.0
+GET,/profile.php HTTP/1.1,HTTP/1.1
+PUT,/path/with@symbol,HTTP/1.1
+PATCH,/incorrect/space here HTTP/1.1,HTTP/1.1
+OPTIONS,/valid/request HTTP/1.1,HTTP/1.1
+
