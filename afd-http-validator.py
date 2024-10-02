@@ -183,10 +183,19 @@ class ModernGUI:
                     self.procesar_linea(http_request.strip(), i)
 
     def leer_xlsx(self, file_path):
-        df = pd.read_excel(file_path)
-        for i, row in df.iterrows():
-            for item in row:
-                self.procesar_linea(str(item).strip(), i+1)
+        try:
+            df = pd.read_excel(file_path, header=None)  # Read without assuming header
+            for i, row in df.iterrows():
+                if len(row) >= 3:  # Ensure we have at least URL, Method, and Version
+                    url = str(row[0]).strip()
+                    method = str(row[1]).strip()
+                    version = str(row[2]).strip()
+                    http_request = f"{method} {url} {version}"
+                    self.procesar_linea(http_request, i+1)
+        except ImportError:
+            messagebox.showerror("Error", "The openpyxl module is not installed. Please install it using 'pip install openpyxl'.")
+        except Exception as e:
+            messagebox.showerror("Error", f"An error occurred while reading the Excel file: {str(e)}")
 
     def leer_docx(self, file_path):
         doc = Document(file_path)
@@ -201,13 +210,14 @@ class ModernGUI:
 
     def procesar_linea(self, texto, posicion):
         is_accepted, generated_string = self.dfa.accepts(texto)
-        categoria = self.determinar_categoria(texto)
-        self.ocurrencias.append({
-            'Posición': posicion,
-            'Texto': generated_string,
-            'Categoría': categoria,
-            'Aceptada': 'Sí' if is_accepted else 'No'
-        })
+        if is_accepted: 
+            categoria = self.determinar_categoria(texto)
+            self.ocurrencias.append({
+                'Posición': posicion,
+                'Texto': generated_string,
+                'Categoría': categoria,
+                'Aceptada': 'Sí' if is_accepted else 'No'
+            })
 
     def determinar_categoria(self, url):
         if url.startswith("/api"):

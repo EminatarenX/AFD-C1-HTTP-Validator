@@ -1,0 +1,6 @@
+Posición,Texto,Categoría,Aceptada
+3,GET /api/users?user=1 HTTP/1.1,Recurso Dinámico,Sí
+4,POST /index.html HTTP/2,Otro,Sí
+7,PUT /api/cars?mesh=steal&color=red HTTP/1.0,Recurso Dinámico,Sí
+8,GET /images/brawlstars.png HTTP/2,Otro,Sí
+9,POST /soup/mypage.php HTTP/2,Otro,Sí
