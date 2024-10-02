@@ -1,0 +1,16 @@
+URL,Method,Version
+/api/users,GET,HTTP/1.1
+/submit/form.php?user=jane&password=456,POST,HTTP/2
+/update/profile/789,PUT,HTTP/1.0
+/remove/item/101,DELETE,HTTP/1.1
+/modify/article/202,PATCH,HTTP/2
+/static/css/style.css,GET,HTTP/1.1
+/register,POST,HTTP/1.0
+/search?category=books&sort=price,GET,HTTP/2
+/invalid/path with spaces,PUT,HTTP/1.1
+/about.html?lang=es,GET,HTTP/1.0
+/not/a/real/method,INVALID,HTTP/1.1
+/api/data,GET,HTTP/3.0
+/login without starting slash,POST,HTTP/1.1
+/path/with/multiple/segments/and/a/very/long/url/that/exceeds/normal/length,GET,HTTP/2
+/user/456/post/789?action=delete,DELETE,HTTP/1.1

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>›
+    <ul>
+      <li>GET /api/status HTTP/1.1</li>
+      <li>POST /upload/document.php?type=pdf&size=10mb HTTP/2</li>
+      <li>PUT /update/preferences/notifications HTTP/1.0</li>
+      <li>DELETE /remove/session/abc123 HTTP/1.1</li>
+      <li>PATCH /modify/calendar/event/707 HTTP/2</li>
+      <li>GET /static/fonts/opensans.woff HTTP/1.1</li>
+      <li>POST /unsubscribe HTTP/1.0</li>
+      <li>GET /products?category=laptops&brand=dell&price=500-1000 HTTP/2</li>
+      <li>PUT /invalid/path with spaces HTTP/1.1</li>
+      <li>GET /faq.html?topic=returns HTTP/1.0</li>
+      <li>INVALID /not/a/real/method HTTP/1.1</li>
+      <li>GET /api/data HTTP/3.0</li>
+      <li>POST /message without starting slash HTTP/1.1</li>
+      <li>
+        GET
+        /path/with/multiple/segments/and/a/very/long/url/that/exceeds/normal/length
+        HTTP/2
+      </li>
+      <li>DELETE /forum/thread/123/post/456?reason=offensive HTTP/1.1</li>
+    </ul>
+  </body>
+</html>
