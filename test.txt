@@ -1,12 +1,10 @@
+
+   asdf Esta es una cadena valida  PATCH /api/users/path.php?user=john&password=123 HTTP/1.1
+
 GET /api/users HTTP/1.1
 POST /submit/form.php?user=john&password=123 HTTP/2
 PUT /update/profile/123 HTTP/1.0
 DELETE /remove/item/42 HTTP/1.1
-PATCH /modify/article/56 HTTP/2
-GET /static/images/logo.png HTTP/1.1
-POST /login HTTP/1.0
-GET /search?q=example&page=1 HTTP/2
-PUT /invalid/path with spaces HTTP/1.1
 GET /home.html?param=value HTTP/1.0
 INVALID /not/a/real/method HTTP/1.1
 GET /api/data HTTP/3.0
